@@ -12,10 +12,10 @@ const RegisterForm: React.FC = () => {
           "linear-gradient(to bottom, white, transparent), url('/renting.jpg')",
       }}
     >
-      <div>
+      <div className="bg-slate-900 bg-opacity-70 p-8 rounded-lg w-full max-w-lg mx-4">
+      <div className="text-white font-bold text-2xl lg:text-4xl text-center py-4">
         <h1>Contáctanos para mayor información</h1>
       </div>
-      <div className="bg-slate-900 bg-opacity-70 p-8 rounded-lg w-full max-w-lg mx-4">
         <form className="w-full">
           <div className="mb-5">
             <label
