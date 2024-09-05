@@ -5,7 +5,7 @@ const FAQ: React.FC = () => {
       <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
         <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <h1 className="font-bold text-center text-[#292929] text-2xl lg:text-4xl mt-0">
+            <h1 className="font-bold text-center text-blue-700 text-2xl lg:text-4xl mt-0">
               Preguntas Frecuentes
             </h1>
           </div>
