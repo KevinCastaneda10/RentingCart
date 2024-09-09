@@ -32,7 +32,7 @@ const Header = () => {
           src="/logo-YnnovaRent.jpg"
           width={120}
           height={14}
-          className="h-16 rounded-full p-1"
+          className="h-16 rounded-full p-0.5"
           alt="YnnovaRent-logo"
         />
 
