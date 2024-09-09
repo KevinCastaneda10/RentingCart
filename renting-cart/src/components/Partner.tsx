@@ -10,7 +10,7 @@ const Partner = () => {
           height={400}
           src="/logo-renting.png"
           alt="Logo Renting Colombia"
-          className="h-24 w-auto sm:h-36"
+          className="h-72 w-auto sm:h-72"
         />
       </div>
 

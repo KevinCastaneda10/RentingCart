@@ -21,37 +21,39 @@ const VehicleCarousel: React.FC = () => {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto pt-8 flex flex-col items-center">
-      <h2 className="text-2xl sm:text-3xl text-[#ff8f00] font-bold mb-6">
+      <h2 className="text-2xl sm:text-3xl text-center text-[#ff8f00] font-bold mb-6">
         Vehículos Disponibles para Renting
       </h2>
       <div className="relative flex items-center w-full">
         <button
           onClick={handlePrev}
-          className="absolute left-0 bg-gray-800 text-white rounded-full p-2 sm:p-3 z-10 transform -translate-y-1/2 top-1/2"
+          className="absolute left-4 rigt bg-gray-800 text-white rounded-full p-2 sm:p-3 z-10 transform -translate-y-1/2 top-1/2"
         >
           <FaChevronLeft size={20} />
         </button>
         <div className="overflow-hidden w-full">
           <div
             className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {vehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
-                className="flex-shrink-0 w-1/3 p-2 sm:p-4"
-                style={{ flexBasis: "33.333%" }}
+                className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-2"
               >
-                <div className="group relative">
+                <div
+                  className="relative w-full"
+                  style={{ paddingBottom: "75%" }}
+                >
                   <Image
-                    width={300}
-                    height={200}
                     src={vehicle.imageUrl}
                     alt={vehicle.name}
-                    className="w-full h-32 sm:h-48 object-contain"
+                    layout="fill"
+                    objectFit="contain"
+                    className="absolute top-0 left-0 w-full h-full"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-white p-2 text-center">
-                    <h3 className="text-xs sm:text-sm font-semibold">
+                  <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-2 text-center">
+                    <h3 className="text-sm sm:text-base font-semibold">
                       {vehicle.name}
                     </h3>
                   </div>
@@ -62,7 +64,7 @@ const VehicleCarousel: React.FC = () => {
         </div>
         <button
           onClick={handleNext}
-          className="absolute right-0 bg-gray-800 text-white rounded-full p-2 sm:p-3 z-10 transform -translate-y-1/2 top-1/2"
+          className="absolute right-4 bg-gray-800 text-white rounded-full p-2 sm:p-3 z-10 transform -translate-y-1/2 top-1/2"
         >
           <FaChevronRight size={20} />
         </button>

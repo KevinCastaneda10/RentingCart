@@ -29,7 +29,7 @@ const RegisterForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    setShowModal(false); // Cambio aquí
+    setShowModal(false);
 
     if (!formData.termsAccepted) {
       setError("Debes aceptar las políticas de privacidad.");
@@ -43,7 +43,7 @@ const RegisterForm: React.FC = () => {
 
     try {
       await emailjs.send(serviceID, templateID, formData, userID);
-      setShowModal(true); // Cambio aquí
+      setShowModal(true);
       setFormData({
         name: "",
         company: "",
@@ -70,7 +70,7 @@ const RegisterForm: React.FC = () => {
           "linear-gradient(to bottom, white, transparent), url('/renting.jpg')",
       }}
     >
-      <div className="bg-slate-900 bg-opacity-70 p-8 rounded-lg w-full max-w-lg mx-4">
+      <div className="bg-slate-900 bg-opacity-70 p-8 rounded-lg w-full max-w-xl mx-4 sm:mx-6 md:mx-8 lg:mx-12 my-8">
         <div className="text-white font-bold text-2xl lg:text-4xl text-center py-2">
           <h1>¿Necesitas más información?</h1>
         </div>
