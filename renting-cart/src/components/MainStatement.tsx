@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MainStatement() {
   return (
-    <section id="features" className="pt-7">
+    <section id="features">
       <div className="flex flex-col lg:flex-row justify-center max-w-screen-lg mx-auto pb-10 px-4">
         {/* Texto */}
         <div className="w-full lg:w-2/5 lg:mr-20">

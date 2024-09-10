@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const Header = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -164,24 +164,8 @@ const Header = () => {
                 Pricing
               </a>
             </li>
-            <li>
-              <a
-                href=""
-                className="text-white hover:underline"
-                onClick={toggleMenu}
-              >
-                File Management
-              </a>
-            </li>
-            <li>
-              <a
-                href=""
-                className="text-white hover:underline"
-                onClick={toggleMenu}
-              >
-                Testimonials
-              </a>
-            </li>
+            
+            
           </ul>
         </div>
       </div>
@@ -189,4 +173,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
