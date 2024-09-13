@@ -7,10 +7,11 @@ import FAQ from "@/components/FAQ/Faq";
 import Header from "@/components/Header";
 import MainStatement from "@/components/MainStatement";
 import Partner from "@/components/Partner";
-import VehicleCarousel from "@/components/VehicleCarousel";
+import VehicleCarousel from "@/components/VehicleCarousel/VehicleCarousel";
+import "./globals.css";
 
 export default async function Home() {
-  const phoneNumber = "+573176804823";
+  const phoneNumber = "+573246200856";
   const message =
     "Hola, estoy interesado en obtener más información sobre la renta de vehículos.";
 
@@ -24,7 +25,7 @@ export default async function Home() {
     logo: "https://www.tusitio.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+573176804823",
+      telephone: "+573246200856",
       contactType: "Customer Service",
     },
   };

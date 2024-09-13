@@ -15,14 +15,25 @@ const RegisterForm: React.FC = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [showModal, setShowModal] = useState(false); // Cambio aquí
+  const [showModal, setShowModal] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value, type, checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { id, value, type } = e.target;
+
+    if (type === "checkbox") {
+      const { checked } = e.target as HTMLInputElement;
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: checked,
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -60,7 +71,34 @@ const RegisterForm: React.FC = () => {
     }
   };
 
-  const closeModal = () => setShowModal(false); // Cambio aquí
+  const closeModal = () => setShowModal(false);
+
+  const vehicleOptions = [
+    "Mazda CX-5 Touring",
+    "Renault Kwid Zen",
+    "Renault Oroch",
+    "Toyota Yaris Cross XLS",
+    "Chevrolet Joy 500x500",
+    "Chevrolet Montana Premier",
+    "Chevrolet Montana RS",
+    "Corolla Hybrid Super Blanco",
+    "DFSK Pickup Chasis",
+    "Foton FKR Euro IV",
+    "Gravity Gray KDG 66",
+    "Gravity Gray KDG 70",
+    "Hyundai Creta Premium 4x2 MT",
+    "Isuzu 500x500",
+    "Suzuki Jimny 5P 500x500",
+    "Kia Sonet 2",
+    "Kia Stonic Gris 15 500x500",
+    "Kia Niro Hybrid",
+    "Kia Sonet Plata 029 500x500",
+    "Seat Ibiza 500x500",
+    "Kia Seltos Plata 028 500x500",
+    "Suzuki Fronx Azul",
+    "Toyota Yaris Cross XLS",
+    "Volkswagen T-Cross Trendline Sense 170 TSI MT",
+  ];
 
   return (
     <div
@@ -78,7 +116,7 @@ const RegisterForm: React.FC = () => {
           <div className="mb-5">
             <label
               htmlFor="name"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white dark:text-white"
             >
               Nombre completo
             </label>
@@ -92,11 +130,10 @@ const RegisterForm: React.FC = () => {
               required
             />
           </div>
-
           <div className="mb-5">
             <label
               htmlFor="company"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white dark:text-white"
             >
               Empresa
             </label>
@@ -114,7 +151,7 @@ const RegisterForm: React.FC = () => {
           <div className="mb-5">
             <label
               htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white dark:text-white"
             >
               Correo corporativo
             </label>
@@ -132,7 +169,7 @@ const RegisterForm: React.FC = () => {
           <div className="mb-5">
             <label
               htmlFor="phone"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white dark:text-white"
             >
               Celular
             </label>
@@ -150,19 +187,24 @@ const RegisterForm: React.FC = () => {
           <div className="mb-5">
             <label
               htmlFor="vehicle"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white dark:text-white"
             >
               Vehículos de interés
             </label>
-            <input
-              type="text"
+            <select
               id="vehicle"
               value={formData.vehicle}
               onChange={handleChange}
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              placeholder="Kia Sportage"
               required
-            />
+            >
+              <option value="">Seleccione un vehículo</option>
+              {vehicleOptions.map((vehicle) => (
+                <option key={vehicle} value={vehicle}>
+                  {vehicle}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="flex items-start mb-5">
@@ -178,12 +220,12 @@ const RegisterForm: React.FC = () => {
             </div>
             <label
               htmlFor="termsAccepted"
-              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm font-medium text-white dark:text-gray-300"
             >
               He leído y acepto la{" "}
               <a
                 href="/politics"
-                className="text-blue-600 hover:underline dark:text-blue-500"
+                className="text-blue-500 hover:underline dark:text-blue-200"
               >
                 política de privacidad
               </a>
@@ -205,7 +247,8 @@ const RegisterForm: React.FC = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-xl font-bold mb-4">¡Envío exitoso!</h2>
             <p className="mb-4">
-              Tu información ha sido enviada con éxito. Nos pondremos en contacto contigo en breve.
+              Tu información ha sido enviada con éxito. Nos pondremos en
+              contacto contigo en breve.
             </p>
             <button
               onClick={closeModal}

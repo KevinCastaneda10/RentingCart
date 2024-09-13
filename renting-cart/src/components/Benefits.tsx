@@ -3,7 +3,7 @@ import React from "react";
 const Beneficios = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
+      <div className="bg-gray-200 shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
         <h2 className="text-xl font-bold text-blue-700 mb-4">
           Beneficios Financieros
         </h2>
@@ -26,7 +26,7 @@ const Beneficios = () => {
         </ul>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
+      <div className="bg-gray-200 shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
         <h2 className="text-xl font-bold text-green-700 mb-4">
           Beneficios Operativos
         </h2>
@@ -49,7 +49,7 @@ const Beneficios = () => {
         </ul>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
+      <div className="bg-gray-200 shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:scale-105 duration-500 ease-out">
         <h2 className="text-xl font-bold text-red-700 mb-4">
           Beneficios Tributarios
         </h2>

@@ -38,3 +38,24 @@ body {
   @apply overflow-hidden;
   transition: max-height 0.3s ease-in-out;
 }
+
+.slick-prev, .slick-next {
+  background: #333; /* Color de fondo */
+  border-radius: 50%; /* Forma redonda */
+  color: #ff0000; /* Color del ícono */
+  font-size: 24px; /* Tamaño del ícono */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Altura del botón */
+  line-height: 40px; /* Altura de la línea */
+  text-align: center; /* Centrado del texto */
+  cursor: pointer; /* Cursor de puntero */
+  z-index: 1; /* Asegúrate de que el botón esté encima del carrusel */
+}
+
+.slick-prev {
+  left: 10px; /* Posición desde la izquierda */
+}
+
+.slick-next {
+  right: 10px; /* Posición desde la derecha */
+}
