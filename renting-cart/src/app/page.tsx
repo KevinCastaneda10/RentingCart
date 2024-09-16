@@ -68,7 +68,7 @@ export default async function Home() {
       <FAQ />
       <ContactForm />
 
-      <div className="fixed bottom-20 right-4 flex flex-col gap-4">
+      <div className="fixed bottom-20 right-12 flex flex-col gap-4">
         <WhatsAppButton phoneNumber={phoneNumber} message={message} />
         <CallButton phoneNumber={phoneNumber} />
       </div>
