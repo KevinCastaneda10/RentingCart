@@ -14,20 +14,20 @@ const Footer: React.FC = () => {
             . Todos los derechos reservados.
           </span>
         </div>
-        {/* <div className="flex justify-center space-x-6">
-          <a href="/#" className="hover:underline">
+        <div className="flex justify-center space-x-6">
+          {/* <a href="/#" className="hover:underline">
             About Us
           </a>
           <a href="/#" className="hover:underline">
             Contact
-          </a>
-          <a href="/#" className="hover:underline">
+          </a> */}
+          <a href="/politics" className="hover:underline">
             Privacy Policy
           </a>
-          <a href="/#" className="hover:underline">
+          <a href="/" className="hover:underline">
             Terms & Conditions
           </a>
-        </div> */}
+        </div>
         <div className="flex justify-center space-x-6 mt-4 md:mt-0">
           <div className="relative group">
             <a
