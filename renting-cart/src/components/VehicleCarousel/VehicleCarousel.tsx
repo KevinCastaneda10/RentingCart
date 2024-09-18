@@ -5,10 +5,8 @@ import Image from "next/image";
 import { vehicles } from "@/utils/availableVehicles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "./VehicleCarousel.css";
 
 const VehicleCarousel: React.FC = () => {
-  // Declarar las funciones de los botones antes de usarlas en Slider
   const CustomPrevArrow = (props: any) => {
     const { onClick } = props;
     return (
@@ -27,7 +25,6 @@ const VehicleCarousel: React.FC = () => {
     );
   };
 
-  // Configuración del carrusel
   const settings = {
     dots: true,
     infinite: true,

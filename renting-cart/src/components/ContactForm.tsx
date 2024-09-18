@@ -10,6 +10,7 @@ const RegisterForm: React.FC = () => {
     email: "",
     phone: "",
     vehicle: "",
+    otherVehicle: "",
     termsAccepted: false,
   });
 
@@ -61,6 +62,7 @@ const RegisterForm: React.FC = () => {
         email: "",
         phone: "",
         vehicle: "",
+        otherVehicle: "",
         termsAccepted: false,
       });
     } catch (err) {
@@ -98,6 +100,7 @@ const RegisterForm: React.FC = () => {
     "Suzuki Fronx Azul",
     "Toyota Yaris Cross XLS",
     "Volkswagen T-Cross Trendline Sense 170 TSI MT",
+    "Otros",
   ];
 
   return (
@@ -113,6 +116,7 @@ const RegisterForm: React.FC = () => {
           <h1>¿Necesitas más información?</h1>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
+          {/* Input de nombre */}
           <div className="mb-5">
             <label
               htmlFor="name"
@@ -130,6 +134,7 @@ const RegisterForm: React.FC = () => {
               required
             />
           </div>
+
           <div className="mb-5">
             <label
               htmlFor="company"
@@ -207,17 +212,35 @@ const RegisterForm: React.FC = () => {
             </select>
           </div>
 
-          <div className="flex items-start mb-5">
-            <div className="flex items-center h-5">
+          {formData.vehicle === "Otros" && (
+            <div className="mb-5">
+              <label
+                htmlFor="otherVehicle"
+                className="block mb-2 text-sm font-medium text-white dark:text-white"
+              >
+                ¿Cuál?
+              </label>
               <input
-                id="termsAccepted"
-                type="checkbox"
-                checked={formData.termsAccepted}
+                type="text"
+                id="otherVehicle"
+                value={formData.otherVehicle}
                 onChange={handleChange}
-                className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                placeholder="Especifique el vehículo"
                 required
               />
             </div>
+          )}
+
+          <div className="flex items-center mb-4">
+            <input
+              id="termsAccepted"
+              type="checkbox"
+              checked={formData.termsAccepted}
+              onChange={handleChange}
+              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              required
+            />
             <label
               htmlFor="termsAccepted"
               className="ml-2 text-sm font-medium text-white dark:text-gray-300"
@@ -231,6 +254,7 @@ const RegisterForm: React.FC = () => {
               </a>
             </label>
           </div>
+
           <button
             type="submit"
             disabled={loading}
@@ -238,6 +262,7 @@ const RegisterForm: React.FC = () => {
           >
             {loading ? "Enviando..." : "Enviar"}
           </button>
+
           {error && <p className="text-red-500 mt-2">{error}</p>}
         </form>
       </div>

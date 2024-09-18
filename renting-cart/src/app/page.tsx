@@ -60,7 +60,6 @@ export default async function Home() {
         />
       </Head>
 
-      {/* Aquí envuelves todo el contenido con un div que tenga overflow-x-hidden */}
       <div className="overflow-x-hidden">
         <Header />
         <MainStatement />

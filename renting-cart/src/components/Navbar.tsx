@@ -164,8 +164,6 @@ const Navbar = () => {
                 Pricing
               </a>
             </li>
-            
-            
           </ul>
         </div>
       </div>
