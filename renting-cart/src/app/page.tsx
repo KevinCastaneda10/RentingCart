@@ -60,17 +60,20 @@ export default async function Home() {
         />
       </Head>
 
-      <Header />
-      <MainStatement />
-      <Beneficios />
-      <Partner />
-      <VehicleCarousel />
-      <FAQ />
-      <ContactForm />
+      {/* Aquí envuelves todo el contenido con un div que tenga overflow-x-hidden */}
+      <div className="overflow-x-hidden">
+        <Header />
+        <MainStatement />
+        <Beneficios />
+        <Partner />
+        <VehicleCarousel />
+        <FAQ />
+        <ContactForm />
 
-      <div className="fixed bottom-20 right-12 flex flex-col gap-4">
-        <WhatsAppButton phoneNumber={phoneNumber} message={message} />
-        <CallButton phoneNumber={phoneNumber} />
+        <div className="fixed bottom-20 right-4 flex flex-col gap-4">
+          <WhatsAppButton phoneNumber={phoneNumber} message={message} />
+          <CallButton phoneNumber={phoneNumber} />
+        </div>
       </div>
     </>
   );
