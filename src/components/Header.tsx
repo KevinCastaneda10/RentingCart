@@ -36,8 +36,8 @@ export default function Header() {
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <Image
             src="/Soluciones.webp"
-            width={300}
-            height={150}
+            width={600}
+            height={300}
             alt="Automóvil"
             className="w-full max-w-md object-cover rounded-lg shadow-lg"
           />

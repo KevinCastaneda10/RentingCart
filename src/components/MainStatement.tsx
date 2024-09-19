@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function MainStatement() {
   return (
     <section id="features">
-      <div className="flex flex-col lg:flex-row justify-center max-w-screen-lg mx-auto pb-10 px-4">
+      <div className="flex flex-col lg:flex-row justify-center items-center max-w-screen-lg mx-auto pb-10 px-4">
         <div className="w-full lg:w-2/5 lg:mr-20">
           <h3 className="font-bold text-center text-[#ff8f00] text-2xl lg:text-4xl mt-0">
             Nuestro Servicio de Renting
