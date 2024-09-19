@@ -30,8 +30,8 @@ export default function MainStatement() {
           <div className="relative overflow-hidden transform skew-y-12">
             <Image
               src="/main.webp"
-              width={300}
-              height={200}
+              width={600}
+              height={400}
               alt="Features Image"
               className="w-full transform -skew-y-12"
             />

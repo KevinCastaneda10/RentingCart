@@ -35,7 +35,7 @@ export default function Header() {
 
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <Image
-            src="/Soluciones.jpg"
+            src="/Soluciones.webp"
             width={300}
             height={150}
             alt="Automóvil"
