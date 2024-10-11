@@ -31,15 +31,6 @@ const Partner = () => {
           </div>
         </div>
       </div>
-
-      <div className="text-center">
-        <p className="text-gray-700 text-lg leading-relaxed">
-          Única marca de vehículos en Colombia con servicio de renting propio.
-          Ofrecemos 10 años de experiencia, servicio personalizado. Incluye
-          matrícula, impuestos, SOAT, mantenimiento, llantas y seguro.
-          Calculamos el canon según el kilometraje deseado.
-        </p>
-      </div>
     </div>
   );
 };

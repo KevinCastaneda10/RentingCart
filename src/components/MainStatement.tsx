@@ -9,19 +9,14 @@ export default function MainStatement() {
             Nuestro Servicio de Renting
           </h3>
           <p className="text-gray-600 text-justify leading-6 lg:leading-6 text-base lg:text-sm mt-4">
-            Con más de 4 años de experiencia liderando el sector de renting y
-            financiamiento vehicular, YnnovaRent se destaca por su trayectoria
-            impecable y la confianza de nuestros clientes. Nuestras alianzas
-            estratégicas, profundo conocimiento del mercado y métodos
-            innovadores nos posicionan como el mejor aliado para tomar
-            decisiones inteligentes en movilidad empresarial. <br /> <br />
-            Ofrecemos una amplia gama de soluciones, desde vehículos ejecutivos
-            hasta flotas de trabajo pesado, garantizando opciones personalizadas
-            que impulsan el progreso y la eficiencia de su empresa. Nos
-            especializamos en Renting vehicular, gestión de flotas y soluciones
-            de movilidad corporativa, comprometiéndonos a proporcionar opciones
-            de renting flexibles y financiamiento para vehículos comerciales,
-            asegurando siempre la mejor calidad y servicio en el mercado
+            - Con más de 4 años de experiencia en renting somos tu aliado para
+            decisiones inteligentes en movilidad empresarial. Ofrecemos una
+            amplia gama de soluciones, desde vehículos ejecutivos hasta flotas
+            de trabajo pesado, diseñadas para impulsar el progreso y la
+            eficiencia de su empresa. Nos especializamos en renting vehicular,
+            gestión de flotas y soluciones de movilidad corporativa. , con
+            opciones flexibles y financiamiento de vehículos comerciales,
+            garantizando siempre la mejor calidad y servicio en el mercado
             automotriz empresarial.
           </p>
         </div>

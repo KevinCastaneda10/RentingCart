@@ -15,8 +15,7 @@ const Beneficios = () => {
           </li>
           <li className="flex items-start">
             <span className="text-2xl mr-2">📈</span>
-            Pagos mensuales fijos y predecibles, facilitando la planificación
-            financiera sin sorpresas.
+            Pagos mensuales que facilitan la planificación financiera.
           </li>
           <li className="flex items-start">
             <span className="text-2xl mr-2">💵</span>
@@ -33,18 +32,28 @@ const Beneficios = () => {
         <ul className="space-y-3 text-gray-700">
           <li className="flex items-start">
             <span className="text-2xl mr-2">🔧</span>
-            Mantenimiento y reparaciones incluidos, asegurando vehículos en
-            óptimas condiciones sin costos extra.
+            Mantenimiento y reparaciones incluidos: Los contratos de renting
+            incluyen el mantenimiento y las reparaciones, garantizando que sus
+            vehículos estén siempre en óptimas condiciones.
           </li>
           <li className="flex items-start">
             <span className="text-2xl mr-2">🚗</span>
-            Actualización periódica de flota con los modelos más nuevos y
-            eficientes.
+            Renovación de flota: La flexibilidad del renting permite la
+            actualización periódica de su flota vehicular, asegurando que
+            siempre cuente con los modelos más nuevos y eficientes en términos
+            de consumo y tecnología.
           </li>
           <li className="flex items-start">
             <span className="text-2xl mr-2">📋</span>
-            Gestión operativa simplificada al centralizar todos los servicios en
-            un solo proveedor.
+            Gestión simplificada: Al centralizar todos los servicios
+            relacionados con sus vehículos en un solo proveedor, se simplifica
+            la gestión operativa y se reduce la carga administrativa para su
+            equipo.
+          </li>
+          <li className="flex items-start underline italic text-xs">
+            *La renovación de la flota está sujeta a lo contratado y no se
+            realiza de manera automática; RentingColombia estudia cada caso para
+            evaluar la actualización de los vehículos.
           </li>
         </ul>
       </div>
